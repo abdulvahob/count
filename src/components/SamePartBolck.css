@@ -1,0 +1,17 @@
+.SamePartBolck{
+    border: 2px solid transparent;
+    
+}
+
+.SamePartBolck .SamePartBolck-plus{
+    width: 531px;
+    height: 710px;
+    overflow: hidden;
+}
+
+.SamePartBolck .SamePartBolck-plus img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: center;
+}

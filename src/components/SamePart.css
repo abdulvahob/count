@@ -1,0 +1,5 @@
+.SamePart{
+    display: flex;
+    width: 44%;
+    justify-content: space-between;
+}
