@@ -13,9 +13,10 @@ import "./InfoSwipper.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
-const InfoSwipper = () => {
+const InfoSwipper = (props) => {
   return (
     <>
+    
       <Swiper
         slidesPerView={5}
         spaceBetween={30}
@@ -29,36 +30,11 @@ const InfoSwipper = () => {
         modules={[Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-            <img src={img1} alt="salom" />
+        {props.data.options.map((el, index)=>(
+          <SwiperSlide>
+            <img src={el.src} alt="salom" onClick={(e)=>{props.changed(e, el, index)}} />
         </SwiperSlide>
-        <SwiperSlide>
-            <img src={img1} alt="salom" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src={img1} alt="salom" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src={img1} alt="salom" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src={img1} alt="salom" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src={img1} alt="salom" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src={img1} alt="salom" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src={img1} alt="salom" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src={img1} alt="salom" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src={img1} alt="salom" />
-        </SwiperSlide>
+          ))}
       </Swiper>
     </>
   );

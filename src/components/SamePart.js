@@ -2,11 +2,11 @@ import React from 'react';
 import SamePartBolck from './SamePartBolck';
 import SamepartSwipper from './SamepartSwipper';
 import './SamePart.css'
-const SamePart = () => {
+const SamePart = (props) => {
     return (
         <div className='SamePart'>
-            <SamepartSwipper/>
-            <SamePartBolck/>
+            <SamepartSwipper data={props.data} />
+            <SamePartBolck data={props.data} />
         </div>
     );
 };

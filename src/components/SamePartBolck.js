@@ -2,7 +2,7 @@ import React , {useState} from "react";
 import "./SamePartBolck.css";
 import img1 from "../img/kutubhona/1.jpg";
 
-const SamePartBolck = () => {
+const SamePartBolck = (props) => {
 
     const [mouse , mouseZoom] =  useState()
 
@@ -15,7 +15,7 @@ const SamePartBolck = () => {
   return (
     <div className="SamePartBolck">
       <div className="SamePartBolck-plus">
-        <img onClick={onMouse} src={img1} alt="" />
+        <img onClick={onMouse} src={props.data.src} alt="" />
       </div>
     </div>
   );
