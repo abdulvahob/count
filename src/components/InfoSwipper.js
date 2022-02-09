@@ -1,9 +1,6 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import img1 from '../img/kutubhona/1.jpg'
-import img2 from '../img/kutubhona/2.jpg'
-import img3 from '../img/kutubhona/3.jpg'
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,7 +13,6 @@ import { Pagination, Navigation } from "swiper";
 const InfoSwipper = (props) => {
   return (
     <>
-    
       <Swiper
         slidesPerView={5}
         spaceBetween={30}
@@ -30,11 +26,17 @@ const InfoSwipper = (props) => {
         modules={[Navigation]}
         className="mySwiper"
       >
-        {props.data.options.map((el, index)=>(
-          <SwiperSlide>
-            <img src={el.src} alt="salom" onClick={(e)=>{props.changed(e, el, index)}} />
-        </SwiperSlide>
-          ))}
+        {props.data.options.map((el, index) => (
+          <SwiperSlide key={index}>
+            <img
+              src={el.src}
+              alt="salom"
+              onClick={(e) => {
+                props.changed(e, el, index);
+              }}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

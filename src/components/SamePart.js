@@ -5,8 +5,8 @@ import './SamePart.css'
 const SamePart = (props) => {
     return (
         <div className='SamePart'>
-            <SamepartSwipper data={props.data} />
-            <SamePartBolck data={props.data} />
+            <SamepartSwipper mall={props.mall} changed={props.options} data={props.data} />
+            <SamePartBolck  data={props.data}  />
         </div>
     );
 };

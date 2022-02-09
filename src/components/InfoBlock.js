@@ -32,11 +32,10 @@ const InfoBlock = (props) => {
       <a href="#">Таблица размеров</a>
       <ul>
         {size.map((el, index)=>(
-          <li className={el.status ? 'size': ''} onClick={(e)=>{ChangeHandler(e, el, index)}}>{el.size}</li>
+          <li key={index} className={el.status ? 'size': ''} onClick={(e)=>{ChangeHandler(e, el, index)}}>{el.size}</li>
         ))}
       </ul>
       <button>Добавить в корзину</button>
-      
     </div>
   );
 };

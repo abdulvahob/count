@@ -3,19 +3,23 @@
 }
 
 .SamepartSwipper{
-    width: 80px;
+    width: 90px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .SamepartSwipper li{
-    width: 100%;
+    width: 90px;
     padding: 0 3px;
+    margin: 4px;
+    object-fit: cover;
     height: 100px;
     cursor: pointer;
 }
 
 .SamepartSwipper li img{
     width: 100%;
+    object-fit: cover;
+    height: 100%;
 }

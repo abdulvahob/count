@@ -1,13 +1,18 @@
-import React from 'react';
-import './SamepartSwipper.css'
-import img1 from '../img/kutubhona/1.jpg'
-import img2 from '../img/kutubhona/2.jpg'
-import img3 from '../img/kutubhona/3.jpg'
+import React from "react";
+import "./SamepartSwipper.css";
 const SamepartSwipper = (props) => {
   return (
-    <ul className='SamepartSwipper'>
-      {props.data.options.map((el)=>(
-        <li><img src={el.src} alt="salom" /></li>  
+    <ul className="SamepartSwipper">
+      {props.data.options.map((el, index) => (
+        <li key={index}>
+          <img
+            src={el.src}
+            alt="salom"
+            onClick={(e) => {
+              props.mall(e, el, index);
+            }}
+          />
+        </li>
       ))}
     </ul>
   );
